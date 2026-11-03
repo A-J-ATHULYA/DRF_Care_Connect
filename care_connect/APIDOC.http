@@ -1,0 +1,57 @@
+###
+GET http://127.0.0.1:8000/api/doctor/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/doctor/
+Content-Type: application/json
+
+{
+    "Doctor_name" : "Joseph",   
+    "Specialization" : "Pediatrics",    
+    "Experience" : 19,    
+    "Hospital" : "Medical Care", 
+    "Consultation_Fee" : 500, 
+    "Available" : true
+}
+
+###
+GET  http://127.0.0.1:8000/api/doctor/1/
+Accept:  application/json
+
+###
+PUT http://127.0.0.1:8000/api/doctor/1/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "Doctor_name": "Sethuram Iyer",
+  "Specialization": "Oncology",
+  "Experience": 8,
+  "Hospital": "Elmex",
+  "Consultation_Fee": 1000,
+  "Available": true
+}
+
+###
+DELETE http://127.0.0.1:8000/api/doctor/9/
+
+###
+GET http://127.0.0.1:8000/api/appointment/
+Accept: application/json
+
+
+
+###
+POST http://127.0.0.1:8000/api/appointment/
+Content-Type: application/json
+
+{
+  "Patient_name" : "Adi",
+  "Age"   : 21,
+  "Gender" : "male",
+  "Contact_number" : 9687095645,   
+  "Doctor_id" : 5,
+  "Appointment_date" : "2026-10-7",
+  "Problem" : "Nose block"
+}
